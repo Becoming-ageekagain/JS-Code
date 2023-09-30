@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Funtions</title>    
+<body>
+ <button onclick="interval(`Added`);" class="test">Add to Cart</button>  
+</body>
+<script>
+let eff=document.querySelector('.test');
+let teff=document.querySelector('title');
+
+console.log(teff.innerHTML);
+
+setInterval(function(){
+if(teff.innerHTML==`(2) New Messages)`){
+    teff.innerHTML=`Advanced Functions`;
+}
+else
+{
+teff.innerHTML=`(2) New Messages`
+}},1000)
+
+let f;
+console.log(f);
+function interval(p)
+{
+ clearTimeout(f);
+ f=setTimeout(function(){
+eff.innerHTML=`Add to cart`;
+},3000);
+eff.innerHTML=`${p}`;   
+
+}
+
+
+
+
+
+
+
+
+</script>
+</head>    
+</html>
