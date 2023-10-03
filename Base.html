@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Advanced Funtions</title>    
+<title>Advanced Functions</title>    
 <body>
  <button onclick="interval(`Added`);" class="test">Add to Cart</button>  
 </body>
@@ -9,16 +9,27 @@
 let eff=document.querySelector('.test');
 let teff=document.querySelector('title');
 
+
 console.log(teff.innerHTML);
 
+const n=3;//Number of Messages; 
+
 setInterval(function(){
-if(teff.innerHTML==`(2) New Messages)`){
+if(teff.innerHTML==`(${n}) New Messages` && n>1){
     teff.innerHTML=`Advanced Functions`;
 }
-else
+else if(teff.innerHTML==`Advanced Functions` && n>1)
 {
-teff.innerHTML=`(2) New Messages`
-}},1000)
+teff.innerHTML=`(${n}) New Messages`;
+}
+
+else if(n==0){
+teff.innerHTML=`App`;
+}
+
+},1000);
+
+
 
 let f;
 console.log(f);
@@ -29,9 +40,7 @@ function interval(p)
 eff.innerHTML=`Add to cart`;
 },3000);
 eff.innerHTML=`${p}`;   
-
 }
-
 
 
 
